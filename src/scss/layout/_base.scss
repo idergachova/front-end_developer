@@ -1,0 +1,23 @@
+html, body {
+	height: 100%;
+}
+body {
+	background: url(../../img/noise.png), #1B1C21;
+	background-blend-mode: soft-light;
+	font-family: var(--ff);
+	color: var(--c-text);
+}
+
+.wrapper {
+	max-width: 1920px;
+	margin-inline: auto;
+}
+
+.container {
+	max-width: calc(1240px + 40px);
+	margin-inline: auto;
+	padding: 20px;
+}
+.main {
+	padding: 20px;
+}

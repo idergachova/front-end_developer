@@ -1,0 +1,24 @@
+// vendors
+@import 'vendors/reset';
+
+// utils
+@import 'utils/vars';
+@import 'utils/mixins';
+
+// layout
+@import 'layout/base';
+@import 'layout/scroll';
+@import 'layout/grid';
+
+// components
+//      &__ui kit
+@import 'components/ui/btn';
+
+//      &__base
+@import 'components/header';
+
+//      &__section
+@import 'components/section/section-main';
+@import 'components/section/section-services';
+
+ 

@@ -1,0 +1,34 @@
+.section-services {
+    background: var(--c-bg-services);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.services {
+    padding-top: 0;
+    padding-bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.services-item {
+    border-radius: 30px;
+    background: var(--c-bg-box);   
+    padding: 24px 31px;
+    display: grid;
+    gap: 16px;
+
+		&__icon {
+            text-align: center;
+		}
+
+		&__text {
+            color: var(--c-text-grey);
+            font-family: var(--ff);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 180%;
+            text-transform: capitalize;
+		}
+}
