@@ -1,0 +1,114 @@
+.section-about {
+    padding-top: 55px;
+    padding-bottom: 36px;
+
+    &__title {
+        color: var(--c-primary);
+        font-family: var(--ff);
+        font-size: 53px;
+        font-weight: 400;
+        letter-spacing: 5.3px;
+        text-transform: uppercase;
+        margin-bottom: 80px;
+    }
+
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    &__img {
+        max-width: 600px;
+        border-radius: 30px;
+        img{
+            border-radius: 30px;
+            border: 1px solid var(--c-border);
+        }
+    }
+}
+
+.desc {
+    &__text {
+        max-width: 600px;
+        color: var(--c-text);
+        font-family: var(--ff-text);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 180%;
+        letter-spacing: 0.72px;
+        text-transform: capitalize;
+        margin-bottom: 28px;
+    }
+}
+
+.desc__education {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    margin-bottom: 14px;
+
+    &__title{
+        color: var(--c-primary);
+        font-family: var(--ff);
+        font-size: 36px;
+        font-weight: 400;
+        letter-spacing: 3.6px;
+        text-transform: uppercase;
+     }
+
+    &__icon{
+        color: var(--c-title);
+        font-family: var(--ff);
+        font-size: 64px;
+        font-weight: 400;
+        line-height: 180%;
+        letter-spacing: 2.56px;
+        text-transform: capitalize;
+     }
+}
+
+.education {
+    display: grid;
+    gap: 48px;
+}
+
+.education__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    // &__icon {
+    //     color: var(--c-primary);
+    //     font-family: var(--ff);
+    //     font-size: 56px;
+    //     font-weight: 400;
+    //     line-height: 180%;
+    //     letter-spacing: 2.24px;
+    //     text-transform: capitalize;
+    // }
+
+    &__text {
+        max-width: 533px;
+        color: var(--c-text);
+        font-family: var(--ff-text);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 180%;
+        letter-spacing: 0.72px;
+        text-transform: capitalize;
+    }
+}
+
+#dot {
+    margin-top: 31px;
+}
+
+// #dot {
+//     font-size: 64px;
+//     margin-bottom: 7px;
+// }
+
+// #hash {
+//     margin-bottom: 11px;
+// }

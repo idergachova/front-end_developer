@@ -106,7 +106,8 @@
 			transition: var(--transition);
 			background: var(--c-primary);
 			opacity: 0;
-		}		
+		}	
+			
 		&._active, &:hover {
 			&::before {
 				opacity: 1;

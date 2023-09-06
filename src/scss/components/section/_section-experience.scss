@@ -1,0 +1,100 @@
+.section-experience {
+    padding-bottom: 96px;
+
+    &__title {
+        display: flex;
+        align-items: flex-start;
+        color: var(--c-primary);
+        font-family: var(--ff);
+        font-size: 36px;
+        font-weight: 400;
+        letter-spacing: 3.6px;
+        text-transform: uppercase;
+        margin-bottom: 64px;
+    }
+
+    &__img {
+        border-radius: 30px;
+        border: 1px solid var(--c-border);
+    }
+
+    &__desc {
+        padding-top: 110px;
+        display: grid;
+        gap: 158px;
+    }
+}
+
+#star {
+    margin-top: 5px;
+}
+
+.section-experience__item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 40px;      
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '<!--';
+            color: var(--c-content);
+            font-family: var(--ff);
+            font-size: 64px;
+            font-weight: 400;
+            line-height: 180%;
+            letter-spacing: 2.56px;
+            text-transform: capitalize;
+            left: 0px;
+            bottom: 38px;
+    }
+    
+        &::after {
+            position: absolute;
+            content: '-->';
+            color: var(--c-content);
+            font-family: var(--ff);
+            font-size: 64px;
+            font-weight: 400;
+            line-height: 180%;
+            letter-spacing: 2.56px;
+            text-transform: capitalize;
+            right: 0px;
+            top: 31px;
+}
+}
+
+.item {
+    &__year {
+        max-width: 120px;
+        color: var(--c-primary);
+        font-family: var(--ff);
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 180%;
+        letter-spacing: 0.96px;
+        text-transform: capitalize;
+    }
+
+    &__company {
+        max-width: 261px;
+        color: var(--c-title);
+        font-family: var(--ff);
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: 1.8px;
+        text-transform: uppercase;
+    }
+
+    &__desc {
+        max-width: 665px;
+        color: var(--c-text);
+        font-family: var(--ff-text);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 180%;
+        letter-spacing: 0.72px;
+        text-transform: capitalize;
+    }
+}

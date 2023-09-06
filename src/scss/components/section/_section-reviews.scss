@@ -1,0 +1,53 @@
+.section-reviews {
+    overflow: hidden;
+
+    &__header, 
+    &__footer {
+        background-color: var(--c-bg-reviews);
+        padding: 16px;
+        color: var(--c-primary);
+        font-family: var(--ff);
+        font-size: 53px;
+        font-weight: 400;
+        letter-spacing: 5.3px;
+        text-transform: uppercase;
+        white-space: nowrap;
+
+        span:first-child {
+            margin-left: -55px;
+        }
+
+        span:nth-child(even) {
+            color: var(--c-title);
+        }
+    }
+
+    &__item {
+        padding-top: 110px;
+        padding-bottom: 110px;
+    }
+    // SOON
+    &__title {
+        text-align: center;
+        color: #F9CE37;
+        font-family: Unica One;
+        font-size: 53px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 5.3px;
+        text-transform: uppercase;
+    }
+
+    &__footer {
+        color: var(--c-title);
+
+        span:first-child {
+            margin-left: -15px;
+        }
+
+        span:nth-child(even) {
+            color: var(--c-primary);
+        }
+    }
+}
