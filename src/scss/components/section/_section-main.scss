@@ -6,13 +6,52 @@
     padding-bottom: 0;
     margin-top: 52px;
     margin-bottom: 110px;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        width: 1192px;
+        height: 1192px;
+        border-radius: 1192px;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(217, 217, 217, 0.06) 0%, rgba(255, 255, 255, 0.00) 100%);
+        filter: blur(10px);
+        content: '';
+        display: block;
+        left: -84px;
+        top: -585px;
+    }
+
+    @include mobile {
+        position: static;
+        display: flex;
+        flex-flow: wrap;
+        margin-top: 56px;
+        gap: 16px;
+        margin-bottom: 64px;
+        &::before {
+            display: none;
+    }}
 
     &__content {
         max-width: 493px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include mobile {
+            order: 10;
+        }
+    }
+
+    &__info {
+        @include mobile {
+            position: relative;
+            display: flex;
+            flex-flow: wrap;
+        }
     }
 
     &__title {
-        margin-top: 94px;
+        margin-top: 72px;
         color: var(--c-title);
         font-family: var(--ff);
         font-size: 53px;
@@ -23,12 +62,29 @@
         line-height: 77px;
         margin-bottom: 32px;
         text-align: end;
+
+        @include mobile {
+        font-size: 34px;
+        letter-spacing: 3.4px;
+        line-height: 160%;
+        text-align: center;
+        order: 1;
+        margin-top: 0;
+        margin-bottom: 0;
+        }
     }
 
     &__btn {
         display: flex;
         justify-content: flex-end;
         position: relative;
+        z-index: -99;
+        @include mobile {
+            order: 6;
+            position: absolute;
+            top: 490px;
+            left: 75px;
+        }
     }
 
     &__line {
@@ -37,25 +93,46 @@
         height: 328px;
         position: absolute;
         bottom: -15px;
+        @include mobile {
+            display: none;
+        }
     }
 
     &__light {
         position: absolute;
         left: -199px;
         top: -304px;
+        @include mobile {
+        position: absolute;
+        left: 245px;
+        top: -430px;
+        }
     }
 
 	&__skills {
         display: grid;
         gap: 39px;
         margin-top: 68px;
+        @include mobile {
+        order: 3;
+        display: flex;
+        flex-flow: wrap;
+        margin-top: 40px;
+        gap: 140px;
 		}
+    }
 }
 
 .skills-ach {
         display: flex;
         align-items: center;
         gap: 92px;
+        @include mobile {
+            flex-direction: column;
+            gap: 16px;
+            align-items: flex-start;
+            order: 2;
+        }
 
 		&__count {
             color: var(--c-title);
@@ -65,7 +142,10 @@
             line-height: 180%;
             text-transform: capitalize;
             text-align: center;
-		}
+            @include mobile {
+            font-size: 30px;
+        }
+    }
 
 		&__title {
             color: var(--c-primary);
@@ -74,7 +154,10 @@
             font-weight: 400;
             line-height: 180%;
             text-transform: capitalize;
-		}
+            @include mobile {
+                font-size: 16px;
+        }
+    }
 }
 
 .skills-tech {
@@ -84,13 +167,20 @@
     display: flex;
     align-items: center;
     gap: 60px;
-
+    @include mobile {
+        order: 3;
+        gap: 22px;
+        padding: 14px 16px;
+    }
 }
 
 .cv {
     border-radius: 29px;
     border: 1px solid var(--c-border);
     padding: 32px;
+    @include mobile {
+        padding: 16px 16px;
+    }
 
     &__text {
         color: #000 var(--c-text);
@@ -100,8 +190,35 @@
         line-height: 180%;
         text-transform: capitalize;
         margin-bottom: 22px;
+        @include mobile {
+            font-size: 14px;
+            max-width: 346px;
+            margin-bottom: 14px;
+        }
     }
 }
 
+.img_developer {
+    @include mobile {
+    width: 100%;
+    max-width: 246px;
+    position: absolute;
+    top: 303px;
+    left: 125px;
+    }
+}
+
+.section-main__light-backdrop{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.97);
+    opacity: 0;
+    z-index: -1;
+    transition: var(--transition);
+&._active {
+    opacity: 1;
+}
+}
 
 

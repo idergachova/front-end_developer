@@ -15,7 +15,7 @@
 <body>
 	<div class="wrapper">
 		@@include('components/header.html')
-		@@include('components/section/section-main.html')
+		@@include('components/section/section-main.html')		
 		@@include('components/section/section-services.html')
 		@@include('components/section/section-about.html')
 		@@include('components/section/section-experience.html')
@@ -25,7 +25,13 @@
 	</div>
 
 	<script src="./js/index.bundle.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script>
+		function switchLight() {
+			document.getElementById("btnSolution").classList.toggle("_active");
+			document.getElementById("Lighter").classList.toggle("_active");
+			}
+
 		function navToggle() {
 			document.getElementById("headerUl").classList.toggle("_active");
 			document.getElementById("headerBackdrop").classList.toggle("_active");

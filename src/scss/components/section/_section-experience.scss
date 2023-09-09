@@ -1,5 +1,9 @@
 .section-experience {
     padding-bottom: 96px;
+    @include mobile {
+        padding-top: 24px;
+        padding-bottom: 32px;
+    }
 
     &__title {
         display: flex;
@@ -11,17 +15,30 @@
         letter-spacing: 3.6px;
         text-transform: uppercase;
         margin-bottom: 64px;
+        @include mobile {
+            font-size: 28px;
+            letter-spacing: 2.8px;
+            white-space: nowrap;
+            margin-bottom: 16px;
+            }
     }
 
     &__img {
         border-radius: 30px;
         border: 1px solid var(--c-border);
+        @include mobile {
+            border-radius: 14px;
+            }
     }
 
     &__desc {
         padding-top: 110px;
         display: grid;
         gap: 158px;
+        @include mobile {
+            padding-top: 82px;
+            gap: 116px;
+            }
     }
 }
 
@@ -35,6 +52,11 @@
         justify-content: flex-end;
         gap: 40px;      
         position: relative;
+        @include mobile {
+            flex-direction: column;
+            gap: 16px;
+            }
+
 
         &::before {
             position: absolute;
@@ -48,6 +70,11 @@
             text-transform: capitalize;
             left: 0px;
             bottom: 38px;
+            @include mobile {
+             font-size: 32px; 
+             top: -62px; 
+                }
+            
     }
     
         &::after {
@@ -62,10 +89,23 @@
             text-transform: capitalize;
             right: 0px;
             top: 31px;
+            @include mobile {
+                font-size: 32px; 
+                top: 104px;  
+                   }
 }
 }
 
 .item {
+    &__year-company{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 40px;
+        @include mobile {
+            gap: 14px; 
+               }
+    }
     &__year {
         max-width: 120px;
         color: var(--c-primary);
@@ -75,6 +115,10 @@
         line-height: 180%;
         letter-spacing: 0.96px;
         text-transform: capitalize;
+        @include mobile {
+            font-size: 18px; 
+            width: 100%;  
+               }
     }
 
     &__company {
@@ -85,6 +129,10 @@
         font-weight: 400;
         letter-spacing: 1.8px;
         text-transform: uppercase;
+        @include mobile {
+            font-size: 16px; 
+            letter-spacing: 1.6px;  
+               }
     }
 
     &__desc {
@@ -96,5 +144,8 @@
         line-height: 180%;
         letter-spacing: 0.72px;
         text-transform: capitalize;
+        @include mobile {
+            font-size: 14px;   
+               }
     }
 }

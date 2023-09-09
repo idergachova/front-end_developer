@@ -8,6 +8,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include mobile {
+    padding-top: 32px;
+    padding-bottom: 32px;
+        }
 
     &__logo {
         max-width: 137px;
@@ -17,6 +21,9 @@
 		font-size: 24px;
 		font-weight: 400;
 		text-transform: uppercase;
+        @include mobile {
+            font-size: 16px;
+    }
 		
 		div:last-child{
 			position: absolute;
@@ -27,6 +34,9 @@
 			bottom: -11px;
 			left: 50%;
 			transform: translateX(-50%);
+            @include mobile {
+                font-size: 11px;
+        }
 		}
 	}
 
@@ -34,6 +44,9 @@
         display: flex;
 		align-items: center;
 		gap: 56px;
+        @include mobile {
+            display: none;
+    }
     }
 
     &__a {

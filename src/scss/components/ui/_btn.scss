@@ -15,6 +15,48 @@
     line-height: 180%;
     letter-spacing: 0.64px;
     text-transform: capitalize;
+    transition: var(-transition);
+    @include mobile {
+        border-radius: 14px;
+}
+
+&__icon {
+    width: 29px;
+    height: 29px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    transition: var(-transition);
+}
+
+svg {
+    transition: var(-transition);
+}
+
+path {
+    transition: var(-transition);
+
+}
+
+&:hover {
+    background: var(--c-primary);
+    color: var(--c-text-grey);
+    transition: var(-transition);
+
+    .btn__icon {
+        border: 1px solid var(--c-border);
+    }
+
+    svg {
+        transform: rotate(90deg);
+        transition: var(-transition);
+        path {
+            stroke: var(--c-title);
+        }
+    }
+}
 }
 
 .btn-solution {
@@ -37,4 +79,20 @@
     position: relative;
     z-index: 9;
     margin-right: 65px;
-}
+    transition: var(--transition);
+    @include mobile {
+        font-size: 34px;
+        padding: 16px 18px;
+        border-radius: 14px;
+        margin-right: 0;}
+
+    &._active {
+        background: var(--c-primary);
+    }
+    
+    }
+
+.primary    {
+    @include mobile{
+       float: right;
+}}

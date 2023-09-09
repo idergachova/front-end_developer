@@ -1,6 +1,27 @@
 .section-about {
-    padding-top: 55px;
-    padding-bottom: 36px;
+    padding-top: 110px;
+    padding-bottom: 64px;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        width: 1192px;
+        height: 1192px;
+        border-radius: 1192px;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(217, 217, 217, 0.06) 0%, rgba(255, 255, 255, 0.00) 100%);
+        filter: blur(30px);
+        content: '';
+        display: block;
+        left: 24px;
+        top: 0;
+        z-index: -99;
+    }
+    @include mobile {
+        position: static;
+        padding-top: 64px;
+        padding-bottom: 0;
+        
+    }
 
     &__title {
         color: var(--c-primary);
@@ -10,12 +31,21 @@
         letter-spacing: 5.3px;
         text-transform: uppercase;
         margin-bottom: 80px;
+         @include mobile {
+        font-size: 34px;
+        letter-spacing: 3.4px;
+        margin-bottom: 40px;
+    }
     }
 
     &__content {
         display: flex;
         align-items: flex-start;
         gap: 40px;
+        @include mobile {
+        flex-direction: column-reverse;
+        gap: 24px;
+    }
     }
 
     &__img {
@@ -25,6 +55,10 @@
             border-radius: 30px;
             border: 1px solid var(--c-border);
         }
+            @include mobile {
+            border-radius: 14px;
+            order: 1;
+    }
     }
 }
 
@@ -39,6 +73,10 @@
         letter-spacing: 0.72px;
         text-transform: capitalize;
         margin-bottom: 28px;
+        @include mobile {
+        font-size: 16px;
+        letter-spacing: 0.64px;
+        }
     }
 }
 
@@ -47,6 +85,9 @@
     align-items: center;
     gap: 34px;
     margin-bottom: 14px;
+    @include mobile {
+        margin-bottom: 8px;
+        }
 
     &__title{
         color: var(--c-primary);
@@ -55,6 +96,10 @@
         font-weight: 400;
         letter-spacing: 3.6px;
         text-transform: uppercase;
+        @include mobile {
+            font-size: 28px;
+            letter-spacing: 2.8px;
+            }
      }
 
     &__icon{
@@ -65,18 +110,30 @@
         line-height: 180%;
         letter-spacing: 2.56px;
         text-transform: capitalize;
+        @include mobile {
+            font-size: 48px;
+            letter-spacing: 1.92px;
+        }
      }
 }
 
 .education {
     display: grid;
     gap: 48px;
+    @include mobile {
+        gap: 24px;
+    }
+
+
 }
 
 .education__item {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;    
+    @include mobile {
+        gap: 32px;
+    }
 
     // &__icon {
     //     color: var(--c-primary);
@@ -97,11 +154,18 @@
         line-height: 180%;
         letter-spacing: 0.72px;
         text-transform: capitalize;
+        @include mobile {
+            font-size: 14px;
+            letter-spacing: 0.56px;
+        }
     }
 }
 
 #dot {
     margin-top: 31px;
+    @include mobile {
+        padding-right: 23px;
+    }
 }
 
 // #dot {

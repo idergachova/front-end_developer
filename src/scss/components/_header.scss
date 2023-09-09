@@ -15,6 +15,10 @@
 		font-size: 24px;
 		font-weight: 400;
 		text-transform: uppercase;
+		@include mobile {
+			border-radius: 0px 0px 14px 14px;
+			padding: 17px 10px 22px;
+		}
 		
 		div:last-child{
 			position: absolute;
@@ -25,7 +29,12 @@
 			text-transform: lowercase;
 			bottom: 24px;
 			left: 50%;
-			transform: translateX(-50%)
+			transform: translateX(-50%);
+
+			@include mobile {
+				font-size: 8px;
+				bottom: 16px;
+			}
 		}
 	}
 	
@@ -143,9 +152,15 @@
 	font-size: 24px;
 	font-weight: 400;
 	text-transform: uppercase;
-}
+	@include mobile {
+		font-size: 11px;
+}}
 
 .svg-icon:hover path {
     fill: var(--c-primary);
 	transition: var(--transition);
+}
+
+.icon-menu {
+	margin-top: 14px;
 }

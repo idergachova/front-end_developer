@@ -10,7 +10,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 40px;
-}
+    @include mobile {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}}
 
 .services-item {
     border-radius: 30px;
@@ -18,6 +21,9 @@
     padding: 24px 31px;
     display: grid;
     gap: 16px;
+    @include mobile {
+        padding: 16px;
+    }
 
 		&__icon {
             text-align: center;
@@ -30,5 +36,8 @@
             font-weight: 400;
             line-height: 180%;
             text-transform: capitalize;
+            @include mobile {
+                font-size: 14px;
+            }
 		}
 }

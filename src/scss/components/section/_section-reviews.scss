@@ -12,6 +12,9 @@
         letter-spacing: 5.3px;
         text-transform: uppercase;
         white-space: nowrap;
+        @include mobile {
+            font-size: 34px;
+        }
 
         span:first-child {
             margin-left: -55px;
@@ -37,6 +40,9 @@
         line-height: normal;
         letter-spacing: 5.3px;
         text-transform: uppercase;
+        @include mobile {
+            font-size: 28px;
+        }
     }
 
     &__footer {
